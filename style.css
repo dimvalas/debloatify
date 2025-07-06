@@ -1,0 +1,276 @@
+/* Ensure everything uses border-box */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add or update this for the background blur */
+.background-blur {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  width: calc(100vw + 40px);
+  height: calc(100vh + 40px);
+  background: url("background.jpg") center center / cover no-repeat;
+  filter: blur(14px) brightness(0.3);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 84px;
+  padding: 0 32px;
+  background: rgba(24,24,24,0.88);
+  box-shadow: 0 4px 20px #18181835;
+}
+
+/* Add horizontal padding to content, not navbar itself */
+.left-nav, .right-nav {
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+}
+
+/* Example logo sizing */
+.logo {
+    height: 44px;
+    width: auto;
+    margin-right: 16px;
+}
+
+/* Navigation links */
+.navigation-links {
+    display: flex;
+    align-items: center;
+}
+
+.library-link {
+    color: #b8b8b8;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 8px 18px;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    transition: background 0.18s;
+}
+.library-link:hover {
+    background: #273950;
+}
+
+/* Discord logo example */
+.discord-logo {
+    height: 38px;
+    width: auto;
+}
+
+.hero-button-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.hero-large-btn {
+  display: block;
+  width: 100%;
+  max-width: none;
+  min-width: 320px;
+  padding: 22px 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  text-align: center;
+  color: #fff;
+  background: rgb(24, 24, 24);
+  border: none;
+  border-radius: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.18s, transform 0.13s;
+}
+
+/* Make the button match the hero width */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero, .hero-button-section {
+  width: 100%;
+  max-width: 800px; /* Increased from 600px to 800px */
+}
+
+.hero-large-btn:hover, .hero-large-btn:focus {
+  background: linear-gradient(90deg, #1f355c 0%, #442962 100%);
+  transform: translateY(-2px) scale(1.025);
+}
+
+.main {
+    width: 100%;
+    padding-top: 100px; /* match or exceed navbar height + gap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Example: Cool glassy effect for .hero content */
+.hero {
+  width: 100%;
+  max-width: 800px;
+  box-sizing: border-box;
+  margin: 150px 0 0 0;
+  /* background removed earlier */
+  /* border-radius: 18px; */   /* Remove or comment out */
+  /* box-shadow: 0 6px 36px #14171c33; */   /* Remove or comment out */
+  padding: 36px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Restore and emphasize hero text size */
+.hero-text-1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  text-align: center;
+  display: block;
+    font-family: Arial, sans-serif;
+  margin-bottom: 18px;
+  color: #fff;
+  width: 100%;
+}
+
+/* Optional: emphasize .hero-text-2 as well */
+.hero-text-2 {
+  font-size: 1.22rem;
+  line-height: 1.55;
+  color: #f3f3f3;
+    font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.hero-button-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 38px;
+}
+
+.hero-large-btn {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  padding: 22px 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #fff;
+  background: rgba(24,24,24,0.88); /* Match navbar */
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 2px 24px #05080a27;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.13s;
+}
+
+.hero-large-btn:hover,
+.hero-large-btn:focus {
+  background: rgba(34,34,40,0.95); /* Slightly darker on hover if desired */
+  transform: translateY(-2px) scale(1.025);
+}
+
+.hero-large-btn {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Retain other styles: logo, navigation-links, etc. */
+
+/* ------- Place .background-blur in your HTML ------- */
+.site-logo {
+    font-family: Arial, sans-serif;
+    font-size: 2.1rem;
+    font-weight: bold;
+    color: #e3e8ef;
+    margin-right: 18px;
+    letter-spacing: 1.2px;
+    line-height: 1;
+    user-select: none;
+    text-shadow: 0 2px 12px #2224;
+    /* Align with others in navbar */
+    display: flex;
+    align-items: center;
+    height: 44px;
+}
+
+.footer {
+  width: 100%;
+  background: rgba(24,24,24,0.88); /* Matches navbar background */
+  color: #b8b8b8;
+  text-align: center;
+  padding: 36px 0 14px 0;
+  margin-top: 0;        /* Remove any gap above */
+  margin-bottom: 0;     /* Ensure no unwanted bottom space */
+  font-family: Arial, sans-serif;
+  box-shadow: 0 -2px 24px #14171c44;
+  position: relative;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.footer-link {
+  color: #b8b8b8;
+  text-decoration: none;
+  font-size: 1.08rem;
+  padding: 2px 8px;
+  border-radius: 5px;
+  transition: background 0.16s, color 0.16s;
+}
+.footer-link:hover, .footer-link:focus {
+  background: #242c41;
+  color: #fff;
+}
+
+.footer-copy {
+  font-size: 0.96rem;
+  color: #8690a3;
+}
+
+.main {
+  flex: 1 0 auto; /* Make main content expand to fill the space */
+}
+
+/* Update the footer styles */
