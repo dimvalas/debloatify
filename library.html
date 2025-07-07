@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preload" href="style.css" as="style">
+  <link rel="stylesheet" href="style.css">
+  <meta http-equiv="Cache-control" content="public, max-age=31536000">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debloatify | Home</title>
+</head>
+<body>
+<div class="background-blur"></div>
+<header>
+  <div class="navbar">
+    <section class="left-nav">
+      <span class="site-logo">Debloatify</span>
+      <div class="navigation-links">
+        <a href="index.html" class="library-link">Home</a>
+      </div>
+    </section>
+    <section class="right-nav">
+      <img src="discord-logo.png" alt="discord" class="discord-logo" loading="lazy">
+    </section>
+  </div>
+</header>
+<main class="main">
+  <section class="hero">
+        <span class="hero-text-1">
+            Debloated ISO:
+        </span>
+    <p class="hero-text-2">
+      Debloatify offers a debloated ISO, the current version is 23H2 because some things didn't work on 24H2, If u have any issues with the first release. Please tell me on discord, my user is Dimvalas.
+      The next public release will be in a month or so, since I will update it to 24H2 latest cumulative update.
+    </p>
+  </section>
+  <section class="hero-button-section">
+    <a href="https://transfer.it/t/kvG08bs3SDAI" target="_blank" class="hero-large-btn">Download ISO</a>
+  </section>
+</main>
+<footer class="footer">
+  <nav class="footer-nav">
+    <a href="" class="footer-link">Home</a>
+    <a href="" class="footer-link">Library</a>
+    <a href="" class="footer-link">Discord</a>
+    <a href="" class="footer-link">About</a>
+    <a href="" class="footer-link">GitHub</a>
+  </nav>
+  <div class="footer-copy">
+    &copy; 2025 Debloatify. All rights reserved.
+  </div>
+</footer>
+<script>
+  // Defer background image loading for faster perception of other content
+  window.addEventListener('DOMContentLoaded', function() {
+    const bg = document.querySelector('.background-blur');
+    if (bg) {
+      bg.style.backgroundImage = 'url("background.jpg")';
+    }
+  });
+</script>
+<script src="main.js"></script>
+</body>
+</html>
